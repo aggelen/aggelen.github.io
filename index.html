@@ -4,15 +4,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>aggelen (Aykut Görkem GELEN)</title>
-	<meta name="description" content="Aykut Görkem GELEN, kişisel, akademik">
+	<meta name="description" content="Aykut Görkem GELEN'e ait kişisel, akademik vs. sayfa!">
 	<meta name="keywords" content="aykut, görkem, gelen, aggelen">
 	<meta name="author" content="Aykut Görkem GELEN">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	
-	
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -28,13 +27,13 @@
           font-size: 3.5rem;
         }
       }
-	  
+
 	  main > .container {
   padding: 60px 15px 0;
 }
 
 .footer {
-  background-color: #f5f5f5;
+	text-align: center;
 }
 
 .footer > .container {
@@ -42,30 +41,255 @@
   padding-left: 15px;
 }
 
+/* Remove dark-nav class from nav tag to see the light version  */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  font-family: arial;
+}
+
+.container:after, .container:before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Start navbar */
+.nav {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ececec;
+  min-height: 50px;
+  height: auto;
+}
+.nav .nav-heading {float: left}
+
+.nav .nav-heading .toggle-nav {
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: none;
+  display: none;
+  background-color: transparent;
+}
+.nav .nav-heading > a {
+  text-decoration: none;
+  color: #000;
+  line-height: 60px;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+/* Start menu */
+.nav .menu {
+  float: right;
+}
+.nav .menu:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.nav .list {
+  float: right;
+  margin: 0;
+}
+.nav .list > li {
+  float: left;
+  list-style: none;
+}
+.nav .list > li > a {
+  color: #555;
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+  padding: 0 10px;
+}
+.nav .list > li > a:hover,
+.nav .list > li.active > a {
+  color: #333
+}
+
+/* Start drodpwn menu */
+.categories {
+  position: relative;
+}
+.nav .list .categories .drop-down {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  padding: 5px 0;
+  min-width: 160px;
+  width: auto;
+  white-space: nowrap;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  display: none;
+  z-index: 99999
+}
+.nav .list .drop-down > .seprator {
+  height: 1px;
+  width: 100%;
+  margin: 9px 0;
+  background-color: #e5e5e5
+}
+.drop-down > li > a {
+  color: #333;
+  display: block;
+  padding: 3px 20px;
+  text-decoration: none;
+}
+.show {
+  display: block
+}
+
+/* Sub dropdown menu */
+.categories .drop-down .sub-drop-down {position: relative}
+.categories .drop-down .sub-drop-down:hover .sub-dropdown {
+  display: block;
+}
+.categories .drop-down .sub-dropdown {
+  position: absolute;
+  top: -20px;
+  left: 107%;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  padding: 10px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  display: none;
+}
+.categories .drop-down .sub-dropdown:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #cccccc
+}
+.categories .drop-down .sub-dropdown > li > a {
+  color: #555;
+  padding: 5px 0;
+  display: block
+}
+/* End sub dropdown menu */
+/* Dark theme */
+.dark-nav {background-color: #f03340}
+
+.dark-nav .list > li > a {color: white;}
+
+.dark-nav .list > li > a:hover,
+.dark-nav .list > li.active > a {color: #FFF}
+
+.dark-nav .nav-heading > a {color: #EEE}
+
+.dark-nav .nav-heading .toggle-nav {color: #EEE}
+
+/* End Dark theme */
+
+/* Start media query for navbar */
+@media (max-width: 767px) {
+  .nav .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .nav .nav-heading {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #ffe7e7
+  }
+  .nav .nav-heading .brand {float: left}
+
+  .nav .nav-heading .toggle-nav {
+    display: block;
+    float: right;
+    margin-top: 14px;
+  }
+
+  .nav .menu {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: none;
+  }
+
+  .nav .list {
+    float: none;
+    width: 100%;
+  }
+  .nav .list > li {
+    float: none;
+    width: 100%;
+  }
+  .nav .list > li > a {padding: 12px 0;line-height: 1}
+
+  .nav .list .categories .drop-down {
+    background-color: transparent;
+    border: none;
+    position: static;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0
+  }
+  .categories .drop-down .sub-dropdown {
+    position: static;
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+  .categories .drop-down .sub-dropdown > li > a {
+    color: #ff8;
+  }
+  .categories .drop-down .sub-dropdown:before {
+    display: none
+  }
+  /* Simple reset for dark theme */
+  .dark-nav .menu {background-color: #ff28ff}
+  .dark-nav .nav-heading {border-bottom-color: #ff343c}
+  .dark-nav .list .drop-down > li > a {color: #AAA}
+  .dark-nav .list .categories .drop-down .seprator {background-color: #2a2d38}
+
+}
+
 code {
   font-size: 80%;
 }
+
+.baslik {
+	text-align: center;
+}
     </style>
-	
+
 </head>
 <body class="d-flex flex-column h-100">
-    <header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Kişisel </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Anasayfa <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="..." aria-label="Ara">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara!</button>
-      </form>
+
+<header>
+  <!--  Remove dark nav  -->
+  <nav class="nav dark-nav">
+    <div class="container">
+      <div class="nav-heading">
+        <button class="toggle-nav" data-toggle="open-navbar1"><i class="fa fa-align-right"></i></button>
+        <a class="brand" href="https://aggelen.github.io/">aggelen.github.io</a>
+      </div>
+      <div class="menu" id="open-navbar1">
+        <ul class="list">
+          <li><a href="https://aggelen.github.io/">Anasayfa</a></li>
+          <li><a href="#">Projeler</a></li>
+					<li><a href="#">Elektronik Lab</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 </header>
@@ -73,14 +297,35 @@ code {
 <!-- Begin page content -->
 <main role="main" class="flex-shrink-0">
   <div class="container">
-    <h1 class="mt-5">Kişisel web sayfam!</h1>
-    <p class="lead">Geliştiriliyor! </p>
+		<div class="row">
+			<div class="col-md-4">
+				<p class="baslik">Kalman Filtreleri</p>
+				<p style="font-size: 11px; text-align: center;">
+				<a href="https://ieeexplore.ieee.org/abstract/document/8620863/">Gelen A.G., ATASOY A. <br> A New Method for Kalman Filter Tuning</a><br><br>
+				<a href="https://ieeexplore.ieee.org/abstract/document/7960226">Gelen A.G., ATASOY A. <br> Target tracking analysis with Kalman filter in case of model mismatch</a><br><br>
+				<a href="https://www.researchgate.net/profile/Aykut_Gelen/publication/318462656_Multiple_Target_Tracking_Simulation_at_an_Intersection/links/5b756f6045851546c909d8d1/Multiple-Target-Tracking-Simulation-at-an-Intersection.pdf">Gelen A.G., ATASOY A. <br> Multiple  Target  Tracking  Simulation  at  an  Intersection</a>
+				</p>
+			</div>
+
+			<div class="col-md-4">
+				<p class="baslik">Görsel SLAM</p>
+				<div class="embed-responsive embed-responsive-16by9">
+				<iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/G-5jesjNfLc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			</div>
+
+			<div class="col-md-4">
+				<p class="baslik">Nöromorfik Görsel Algı</p>
+				<img src="https://www.researchgate.net/profile/Guillermo_Gallego/publication/320847681/figure/fig2/AS:613514209148984@1523284594697/An-event-camera-and-its-output.png" class="img-fluid" alt="">
+				<p style="font-size: 9px;">Gallego, Guillermo & Lund, Jon & Mueggler, Elias & Rebecq, Henri & Delbruck, Tobi & Scaramuzza, Davide. (2017). Event-based, 6-DOF Camera Tracking from Photometric Depth Maps. IEEE Transactions on Pattern Analysis and Machine Intelligence. PP. 1-1. 10.1109/TPAMI.2017.2769655. </p>
+			</div>
+		</div>
   </div>
 </main>
 
 <footer class="footer mt-auto py-3">
   <div class="container">
-    <span class="text-muted">aggelen, 2020</span>
+    <span>2020, #aggelen</span>
   </div>
 </footer>
 
