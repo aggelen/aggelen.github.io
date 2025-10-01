@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <title>Ödevler — Bilgisayar Programlama | Aykut Görkem Gelen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    /* Sayfa içi küçük düzenlemeler (tema ile uyumlu, minimal) */
+    .toc { margin: 0 0 2rem 0; }
+    .toc ul { list-style: none; padding-left: 0; }
+    .toc li { margin: .25rem 0; }
+    .badge { display:inline-block; font-size:.85rem; padding:.15rem .5rem; border-radius:.35rem; background:#e9ecef; }
+    .meta { font-size:.95rem; color:#666; }
+    .card { padding:1.25rem; border:1px solid #e5e5e5; border-radius:8px; margin-bottom:1.5rem; background:#fff; }
+    .card h3 { margin-top:0; }
+    .split { display:grid; grid-template-columns: 1fr; gap:1rem; }
+    @media (min-width: 980px) {
+      .split { grid-template-columns: 2fr 1fr; }
+    }
+    .rubric-table { width:100%; border-collapse: collapse; margin-top:.5rem; }
+    .rubric-table th, .rubric-table td { border:1px solid #ddd; padding:.5rem .6rem; }
+    .rubric-table th { background:#f6f6f6; text-align:left; }
+    .files a { text-decoration: underline; }
+    .muted { color:#777; }
+  </style>
+</head>
+<body class="is-preload">
+  <!-- Üst başlık -->
+  <header id="header">
+    <div class="inner">
+      <a href="../index.html" class="image avatar">
+        <img src="../images/avatar.jpg" alt="Aykut Görkem Gelen" />
+      </a>
+      <h1><strong>1111.020315 — Bilgisayar Programlama</strong><br/>Ödevler</h1>
+    </div>
+  </header>
+
+  <!-- İçerik -->
+  <div id="main">
+    <section>
+      <header class="major">
+        <h2>Ödevler Genel Bilgi</h2>
+      </header>
+      <p class="meta">
+        Ödevler, dersin öğrenme hedeflerini pekiştirmek için hazırlanmıştır. Teslimler GitHub Classroom, LMS veya e-posta üzerinden duyurulacaktır.
+        Kodda yeterli açıklama (yorum satırı), düzenli çıktı ve talep edilen dosya yapısı beklenir.
+      </p>
+
+      <!-- İçindekiler -->
+      <div class="toc card">
+        <strong>İçerik</strong>
+        <ul>
+          <li><a href="#odev1">Ödev 1 — Birim Dönüşümleri ve Basit Hesap Makinesi</a></li>
+          <li><a href="#odev2">Ödev 2 — Koşullar ve Karar Yapıları ile Uygulamalar</a></li>
+          <li><a href="#odev3">Ödev 3 — Döngülerle Mühendislik Hesaplamaları</a></li>
+          <li><a href="#odev4">Ödev 4 — Dosya/CSV Okuma, Temizleme ve Özetleme</a></li>
+          <li><a href="#odev5">Ödev 5 — Nesne Tabanlı Programlama: Sensör Sınıfı</a></li>
+          <li><a href="#odev6">Ödev 6 — NumPy & Matplotlib ile Veri Analizi ve Görselleştirme</a></li>
+        </ul>
+      </div>
+
+      <!-- Ödev 1 -->
+      <article id="odev1" class="card">
+        <div class="split">
+          <div>
+            <h3>Ödev 1 — Birim Dönüşümleri ve Basit Hesap Makinesi <span class="badge">Hafta 2</span></h3>
+            <p><strong>Açıklama:</strong> Kullanıcıdan veri alma, tip dönüşümü, temel aritmetik ve yaygın birim dönüşümlerini uygulama.</p>
+
+            <h4>Öğrenme Hedefleri</h4>
+            <ul>
+              <li>input kullanımı ve tip dönüşümleri</li>
+              <li>temel aritmetik işlemler</li>
+              <li>birim dönüşümlerinin kodlanması</li>
+              <li>hata/istisna durumlarını yönetme (temel)</li>
+            </ul>
+
+            <h4>Görevler</h4>
+            <ol>
+              <li>Kullanıcıdan iki sayı alıp toplama/çıkarma/çarpma/bölme işlemlerini yapan bir “hesap makinesi” yazınız.</li>
+              <li>Aşağıdakilerden en az üçü için dönüşüm menüsü oluşturunuz:
+                <ul>
+                  <li>cm → m, m → cm</li>
+                  <li>Celsius ↔ Fahrenheit</li>
+                  <li>kg ↔ g</li>
+                  <li>W ↔ kW</li>
+                </ul>
+              </li>
+              <li>Hatalı girişlerde kullanıcıyı bilgilendiriniz (ör. tip hatası).</li>
+              <li>Çıktıları anlaşılır ve etiketli biçimde yazdırınız.</li>
+            </ol>
+
+            <h4>Teslim</h4>
+            <ul>
+              <li>Biçim: <code>.py</code> veya <code>.ipynb</code></li>
+              <li>Dosya adı: <code>odev1_ad_soyad.py</code> veya <code>odev1_ad_soyad.ipynb</code></li>
+              <li>Son tarih: <span class="muted">dd.mm.yyyy 23:59</span></li>
+            </ul>
+
+            <h4>Değerlendirme</h4>
+            <table class="rubric-table">
+              <thead><tr><th>Kriter</th><th>Açıklama</th></tr></thead>
+              <tbody>
+                <tr><td>Doğruluk</td><td>İşlemler ve dönüşümler doğru hesaplanıyor mu?</td></tr>
+                <tr><td>Kullanılabilirlik</td><td>Menü akışı ve mesajlar anlaşılır mı?</td></tr>
+                <tr><td>Hata Yönetimi</td><td>Hatalı girişlerde uygun uyarı veriliyor mu?</td></tr>
+                <tr><td>Temizlik</td><td>Kod düzeni, yorumlar, dosya adı/formatı uygun mu?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <aside>
+            <h4>Dosyalar</h4>
+            <ul class="files">
+              <li><a href="./odevler/odev1.docx">Ödev 1 (DOCX)</a></li>
+              <li><a href="./odevler/odev1.md">Ödev 1 (Markdown)</a></li>
+              <li><a href="./ornekler/odev1_ornek_cikti.png">Örnek Çıktı</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 1–2</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Ödev 2 -->
+      <article id="odev2" class="card">
+        <div class="split">
+          <div>
+            <h3>Ödev 2 — Koşullar ve Karar Yapıları ile Uygulamalar <span class="badge">Hafta 4</span></h3>
+            <p><strong>Açıklama:</strong> Karar yapılarıyla kullanıcıdan gelen verilere göre farklı çıktılar üretme.</p>
+            <h4>Öğrenme Hedefleri</h4>
+            <ul>
+              <li>if/elif/else ile çoklu karar akışları</li>
+              <li>basit doğrulama kontrolleri</li>
+              <li>menü tabanlı uygulama tasarlama</li>
+            </ul>
+            <h4>Görevler</h4>
+            <ol>
+              <li>Kullanıcıya seçenekler sunan bir menü hazırlayınız (ör. üçgen türü belirleme, not harfi hesaplama, gerilim bölücü).</li>
+              <li>Her seçenek için uygun koşul bloklarını tasarlayınız ve açıklamalı çıktı veriniz.</li>
+              <li>Hatalı seçim veya eksik veri girişinde uyarı mesajları gösteriniz.</li>
+            </ol>
+            <h4>Teslim</h4>
+            <ul>
+              <li>Biçim: <code>.py</code> veya <code>.ipynb</code></li>
+              <li>Dosya adı: <code>odev2_ad_soyad.py</code></li>
+              <li>Son tarih: <span class="muted">dd.mm.yyyy 23:59</span></li>
+            </ul>
+            <h4>Değerlendirme</h4>
+            <table class="rubric-table">
+              <thead><tr><th>Kriter</th><th>Açıklama</th></tr></thead>
+              <tbody>
+                <tr><td>Doğruluk</td><td>Karar blokları doğru sonuç üretiyor mu?</td></tr>
+                <tr><td>Akış</td><td>Menü ve yönlendirmeler tutarlı mı?</td></tr>
+                <tr><td>Hata Yönetimi</td><td>Yanlış seçimlerde uygun uyarı var mı?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <aside>
+            <h4>Dosyalar</h4>
+            <ul class="files">
+              <li><a href="./odevler/odev2.md">Ödev 2 (MD)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 3–4</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Ödev 3 -->
+      <article id="odev3" class="card">
+        <div class="split">
+          <div>
+            <h3>Ödev 3 — Döngülerle Mühendislik Hesaplamaları <span class="badge">Hafta 6</span></h3>
+            <p><strong>Açıklama:</strong> for/while ve sayma/toplama örüntüleri ile mühendislik bağlamında tekrar eden hesaplar.</p>
+            <h4>Öğrenme Hedefleri</h4>
+            <ul>
+              <li>for/while döngüleri ve kontrol ifadeleri</li>
+              <li>kümülatif hesaplama ve tablo çıktısı</li>
+            </ul>
+            <h4>Görevler</h4>
+            <ol>
+              <li>1’den N’e kadar toplam ve çarpım tablosu.</li>
+              <li>Asal sayı listeleme (N’ye kadar) ve sayaç.</li>
+              <li>RC devresinin birkaç farklı R,C kombinasyonu için zaman sabiti tablosu üretme.</li>
+            </ol>
+            <h4>Teslim</h4>
+            <ul>
+              <li>Biçim: <code>.py</code> veya <code>.ipynb</code></li>
+              <li>Dosya adı: <code>odev3_ad_soyad.py</code></li>
+            </ul>
+            <h4>Değerlendirme</h4>
+            <table class="rubric-table">
+              <thead><tr><th>Kriter</th><th>Açıklama</th></tr></thead>
+              <tbody>
+                <tr><td>Doğruluk</td><td>Döngüler ve sonuçlar doğru mu?</td></tr>
+                <tr><td>Veri Sunumu</td><td>Tablo/biçim anlaşılır mı?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <aside>
+            <h4>Dosyalar</h4>
+            <ul class="files">
+              <li><a href="./odevler/odev3.md">Ödev 3 (MD)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 4–6</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Ödev 4 -->
+      <article id="odev4" class="card">
+        <div class="split">
+          <div>
+            <h3>Ödev 4 — Dosya/CSV Okuma, Temizleme ve Özetleme <span class="badge">Hafta 9</span></h3>
+            <p><strong>Açıklama:</strong> Dosya işlemleri, basit veri temizleme ve raporlama.</p>
+            <h4>Öğrenme Hedefleri</h4>
+            <ul>
+              <li>txt/csv dosyası okuma-yazma</li>
+              <li>try/except ile hata yönetimi</li>
+              <li>özet istatistikler üretme</li>
+            </ul>
+            <h4>Görevler</h4>
+            <ol>
+              <li>Örnek CSV dosyasını okuyup hatalı kayıtları tespit etme (sayısal olmayan girişler).</li>
+              <li>Temizlenmiş veriden ortalama, min, max, std raporu oluşturma.</li>
+              <li>Sonucu metin dosyasına yazma ve ekrana özet yazdırma.</li>
+            </ol>
+            <h4>Teslim</h4>
+            <ul>
+              <li>Biçim: <code>.py</code> veya <code>.ipynb</code> + test CSV</li>
+              <li>Dosya adı: <code>odev4_ad_soyad.py</code></li>
+            </ul>
+            <h4>Değerlendirme</h4>
+            <table class="rubric-table">
+              <thead><tr><th>Kriter</th><th>Açıklama</th></tr></thead>
+              <tbody>
+                <tr><td>Doğruluk</td><td>Okuma/temizleme/özet doğru mu?</td></tr>
+                <tr><td>Sağlamlık</td><td>Hata yakalama uygun mu?</td></tr>
+                <tr><td>Rapor</td><td>Metin çıktısı anlaşılır mı?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <aside>
+            <h4>Dosyalar</h4>
+            <ul class="files">
+              <li><a href="./odevler/odev4.md">Ödev 4 (MD)</a></li>
+              <li><a href="./veri/odev4_ornek.csv">Örnek CSV</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 8–10</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Ödev 5 -->
+      <article id="odev5" class="card">
+        <div class="split">
+          <div>
+            <h3>Ödev 5 — Nesne Tabanlı Programlama: Sensör Sınıfı <span class="badge">Hafta 11</span></h3>
+            <p><strong>Açıklama:</strong> Sınıf tasarımı, veri kapsülleme ve basit metotlar.</p>
+            <h4>Öğrenme Hedefleri</h4>
+            <ul>
+              <li>class, __init__, self kullanımı</li>
+              <li>özellik/metot tasarımı</li>
+              <li>nesneler arası etkileşim (isteğe bağlı)</li>
+            </ul>
+            <h4>Görevler</h4>
+            <ol>
+              <li><code>Sensor</code> sınıfı: ad, birim, değer alanları.</li>
+              <li>Değer güncelleme, ölçüm yazdırma metotları.</li>
+              <li>İsteğe bağlı: <code>Multimeter</code> gibi başka bir sınıf ile etkileşim.</li>
+            </ol>
+            <h4>Teslim</h4>
+            <ul>
+              <li>Biçim: <code>.py</code> veya <code>.ipynb</code></li>
+              <li>Dosya adı: <code>odev5_ad_soyad.py</code></li>
+            </ul>
+            <h4>Değerlendirme</h4>
+            <table class="rubric-table">
+              <thead><tr><th>Kriter</th><th>Açıklama</th></tr></thead>
+              <tbody>
+                <tr><td>Tasarım</td><td>Sınıf yapısı ve metotlar yerinde mi?</td></tr>
+                <tr><td>Kullanım</td><td>Nesne örnekleri doğru kullanılmış mı?</td></tr>
+                <tr><td>Temizlik</td><td>Kod düzeni ve yorumlar yeterli mi?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <aside>
+            <h4>Dosyalar</h4>
+            <ul class="files">
+              <li><a href="./odevler/odev5.md">Ödev 5 (MD)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 10–12</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Ödev 6 -->
+      <article id="odev6" class="card">
+        <div class="split">
+          <div>
+            <h3>Ödev 6 — NumPy & Matplotlib ile Veri Analizi ve Görselleştirme <span class="badge">Hafta 13</span></h3>
+            <p><strong>Açıklama:</strong> Basit veri üretimi/okuması, özet istatistik ve görselleştirme.</p>
+            <h4>Öğrenme Hedefleri</h4>
+            <ul>
+              <li>NumPy dizileriyle temel işlemler</li>
+              <li>Matplotlib ile çizim</li>
+              <li>grafik bileşenlerini etiketleme</li>
+            </ul>
+            <h4>Görevler</h4>
+            <ol>
+              <li>Rastgele 100 ölçüm üretip ortalama/std hesaplama.</li>
+              <li>Zamana bağlı basit sinyal üretip çizdirme.</li>
+              <li>Grafik başlık, eksen adları, ızgara ekleme.</li>
+            </ol>
+            <h4>Teslim</h4>
+            <ul>
+              <li>Biçim: <code>.ipynb</code> (tercih) veya <code>.py</code> + PNG çıktı</li>
+              <li>Dosya adı: <code>odev6_ad_soyad.ipynb</code></li>
+            </ul>
+            <h4>Değerlendirme</h4>
+            <table class="rubric-table">
+              <thead><tr><th>Kriter</th><th>Açıklama</th></tr></thead>
+              <tbody>
+                <tr><td>Doğruluk</td><td>Hesaplamalar ve grafik doğru mu?</td></tr>
+                <tr><td>Okunabilirlik</td><td>Eksenler, başlık ve grid uygun mu?</td></tr>
+                <tr><td>Sunum</td><td>Notebook düzeni ve açıklamalar yeterli mi?</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <aside>
+            <h4>Dosyalar</h4>
+            <ul class="files">
+              <li><a href="./odevler/odev6.md">Ödev 6 (MD)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 12–14</p>
+          </aside>
+        </div>
+      </article>
+
+      <ul class="actions">
+        <li><a href="../index.html#four" class="button">← Ders listesine dön</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Alt bilgi -->
+  <footer id="footer">
+    <div class="inner">
+      <ul class="icons">
+        <li><a href="https://github.com/aggelen" class="icon brands fa-github"><span class="label">Github</span></a></li>
+        <li><a href="mailto:aykut.gelen@erzincan.edu.tr" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>Erzincan Binali Yıldırım Üniversitesi</li>
+        <li>Elektrik-Elektronik Mühendisliği Bölümü</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

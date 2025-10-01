@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <title>Quizler — Bilgisayar Programlama | Aykut Görkem Gelen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <style>
+    .toc { margin: 0 0 2rem 0; }
+    .toc ul { list-style: none; padding-left: 0; }
+    .toc li { margin: .25rem 0; }
+    .badge { display:inline-block; font-size:.85rem; padding:.15rem .5rem; border-radius:.35rem; background:#e9ecef; }
+    .meta { font-size:.95rem; color:#666; }
+    .card { padding:1.25rem; border:1px solid #e5e5e5; border-radius:8px; margin-bottom:1.5rem; background:#fff; }
+    .card h3 { margin-top:0; }
+    .split { display:grid; grid-template-columns: 1fr; gap:1rem; }
+    @media (min-width: 980px) {
+      .split { grid-template-columns: 2fr 1fr; }
+    }
+    .rubric-table { width:100%; border-collapse: collapse; margin-top:.5rem; }
+    .rubric-table th, .rubric-table td { border:1px solid #ddd; padding:.5rem .6rem; }
+    .rubric-table th { background:#f6f6f6; text-align:left; }
+    .files a { text-decoration: underline; }
+    .muted { color:#777; }
+  </style>
+</head>
+<body class="is-preload">
+  <!-- Üst başlık -->
+  <header id="header">
+    <div class="inner">
+      <a href="../index.html" class="image avatar">
+        <img src="../images/avatar.jpg" alt="Aykut Görkem Gelen" />
+      </a>
+      <h1><strong>1111.020315 — Bilgisayar Programlama</strong><br/>Quizler</h1>
+    </div>
+  </header>
+
+  <!-- İçerik -->
+  <div id="main">
+    <section>
+      <header class="major">
+        <h2>Quizler Hakkında</h2>
+      </header>
+      <p class="meta">
+        Quizler, haftalık öğrenmeyi ölçmek ve ara sınav/final hazırlığını desteklemek için tasarlanmıştır. Her quiz kısa süreli, odaklı ve tek konulu olacaktır.
+        Sınav sırasında yalnızca belirtilen materyaller kullanılabilir. Akademik dürüstlük kuralları geçerlidir.
+      </p>
+
+      <!-- İçindekiler -->
+      <div class="toc card">
+        <strong>İçerik</strong>
+        <ul>
+          <li><a href="#quiz1">Quiz 1 — Koşullu İfadeler ve Operatörler</a></li>
+          <li><a href="#quiz2">Quiz 2 — Fonksiyonlar</a></li>
+          <li><a href="#quiz3">Quiz 3 — Listeler ve Sözlükler</a></li>
+          <li><a href="#quiz4">Quiz 4 — Dosya İşlemleri + math/random</a></li>
+          <li><a href="#quiz5">Quiz 5 — OOP Temelleri ve Hata Yönetimi</a></li>
+        </ul>
+      </div>
+
+      <!-- Genel kurallar -->
+      <div class="card">
+        <h3>Genel Kurallar ve Biçim</h3>
+        <ul>
+          <li><strong>Süre:</strong> 15–20 dakika (laboratuvar saatinde uygulanır).</li>
+          <li><strong>Biçim:</strong> Kâğıt veya çevrimiçi; çoktan seçmeli + kısa kod/çıktı soruları.</li>
+          <li><strong>Kaynak:</strong> Aksi belirtilmedikçe açık not yok, internet/yapay zekâ araçları kapalıdır.</li>
+          <li><strong>Geç teslim/mazeret:</strong> Bölüm yönergesi uygulanır; mazeret belgeli ise telafi hakkı tanınabilir.</li>
+          <li><strong>Değerlendirme:</strong> Doğru cevap + düzgün akış ve kod okunabilirliği.</li>
+        </ul>
+      </div>
+
+      <!-- Quiz 1 -->
+      <article id="quiz1" class="card">
+        <div class="split">
+          <div>
+            <h3>Quiz 1 — Koşullu İfadeler ve Operatörler <span class="badge">Hafta 3</span></h3>
+            <p><strong>Kapsam:</strong> Karşılaştırma ve mantıksal operatörler; if/elif/else ile karar akışları.</p>
+            <h4>Soru Tipleri</h4>
+            <ul>
+              <li>Kısa: Verilen ifadelerin True/False sonucu.</li>
+              <li>Kod çıktısı: Küçük bir if-elif bloğunun ekran çıktısı.</li>
+              <li>Uygulama: Not harfi/üçgen türü/gerilim eşiği sınıflaması.</li>
+            </ul>
+            <h4>Biçim ve Süre</h4>
+            <ul>
+              <li>10–12 soru; 15–20 dk.</li>
+              <li>Çizim/şema gerektirmez; net, kısa yanıt beklenir.</li>
+            </ul>
+          </div>
+          <aside>
+            <h4>Belgeler</h4>
+            <ul class="files">
+              <li><a href="./quizler/quiz1.pdf">Quiz 1 (PDF)</a></li>
+              <li><a href="./quizler/quiz1_cozum.pdf">Çözümler (PDF)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 2–3</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Quiz 2 -->
+      <article id="quiz2" class="card">
+        <div class="split">
+          <div>
+            <h3>Quiz 2 — Fonksiyonlar <span class="badge">Hafta 5</span></h3>
+            <p><strong>Kapsam:</strong> Fonksiyon tanımı/çağrımı, parametre/geçiş, dönüş değeri, scope (temel).</p>
+            <h4>Soru Tipleri</h4>
+            <ul>
+              <li>Boşluk doldurma: fonksiyon iskeleti.</li>
+              <li>Kod çıktısı: iki fonksiyonun çağrı sırası.</li>
+              <li>Uygulama: RC zaman sabiti hesaplayan fonksiyon.</li>
+            </ul>
+            <h4>Biçim ve Süre</h4>
+            <ul>
+              <li>8–10 soru; 15–20 dk.</li>
+            </ul>
+          </div>
+          <aside>
+            <h4>Belgeler</h4>
+            <ul class="files">
+              <li><a href="./quizler/quiz2.pdf">Quiz 2 (PDF)</a></li>
+              <li><a href="./quizler/quiz2_cozum.pdf">Çözümler (PDF)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 4–5</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Quiz 3 -->
+      <article id="quiz3" class="card">
+        <div class="split">
+          <div>
+            <h3>Quiz 3 — Listeler ve Sözlükler <span class="badge">Hafta 7</span></h3>
+            <p><strong>Kapsam:</strong> list, tuple (temel), dict; indeksleme/dilimleme, temel metodlar; sözlükte erişim/güncelleme.</p>
+            <h4>Soru Tipleri</h4>
+            <ul>
+              <li>Kod çıktısı: dilimleme ve <code>append/pop</code> etkisi.</li>
+              <li>Eşleştirme: dict metod(lar)ını işleviyle eşleştir.</li>
+              <li>Uygulama: frekans sözlüğü oluşturma.</li>
+            </ul>
+            <h4>Biçim ve Süre</h4>
+            <ul>
+              <li>10–12 soru; 15–20 dk.</li>
+            </ul>
+          </div>
+          <aside>
+            <h4>Belgeler</h4>
+            <ul class="files">
+              <li><a href="./quizler/quiz3.pdf">Quiz 3 (PDF)</a></li>
+              <li><a href="./quizler/quiz3_cozum.pdf">Çözümler (PDF)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 6–7</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Quiz 4 -->
+      <article id="quiz4" class="card">
+        <div class="split">
+          <div>
+            <h3>Quiz 4 — Dosya İşlemleri + <code>math</code>/<code>random</code> <span class="badge">Hafta 10</span></h3>
+            <p><strong>Kapsam:</strong> <code>open/read/write</code>, satır-okuma; basit hata yakalama; <code>math</code> ve <code>random</code> ile temel kullanım.</p>
+            <h4>Soru Tipleri</h4>
+            <ul>
+              <li>Kod tamamlama: dosyadan okuma ve sayısal özet.</li>
+              <li>Kısa yanıt: <code>with</code> bağlam yöneticisi ne sağlar?</li>
+              <li>Uygulama: rastgele sayı üretip dosyaya yazma.</li>
+            </ul>
+            <h4>Biçim ve Süre</h4>
+            <ul>
+              <li>8–10 soru; 15–20 dk.</li>
+            </ul>
+          </div>
+          <aside>
+            <h4>Belgeler</h4>
+            <ul class="files">
+              <li><a href="./quizler/quiz4.pdf">Quiz 4 (PDF)</a></li>
+              <li><a href="./quizler/quiz4_cozum.pdf">Çözümler (PDF)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 9–10</p>
+          </aside>
+        </div>
+      </article>
+
+      <!-- Quiz 5 -->
+      <article id="quiz5" class="card">
+        <div class="split">
+          <div>
+            <h3>Quiz 5 — OOP Temelleri ve Hata Yönetimi <span class="badge">Hafta 12</span></h3>
+            <p><strong>Kapsam:</strong> sınıf/nesne, <code>__init__</code>, özellik/metot; temel kalıtım farkındalığı; <code>try/except</code> ile hata yakalama.</p>
+            <h4>Soru Tipleri</h4>
+            <ul>
+              <li>Kod çıktısı: sınıf örnekleme ve metot çağrısı.</li>
+              <li>Boşluk doldurma: <code>__init__</code> imzası.</li>
+              <li>Kısa yanıt: belirli bir hata için uygun <code>except</code> bloğu.</li>
+            </ul>
+            <h4>Biçim ve Süre</h4>
+            <ul>
+              <li>8–10 soru; 15–20 dk.</li>
+            </ul>
+          </div>
+          <aside>
+            <h4>Belgeler</h4>
+            <ul class="files">
+              <li><a href="./quizler/quiz5.pdf">Quiz 5 (PDF)</a></li>
+              <li><a href="./quizler/quiz5_cozum.pdf">Çözümler (PDF)</a></li>
+            </ul>
+            <p class="meta">İlgili haftalar: 11–12</p>
+          </aside>
+        </div>
+      </article>
+
+      <ul class="actions">
+        <li><a href="../index.html#four" class="button">← Ders listesine dön</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Alt bilgi -->
+  <footer id="footer">
+    <div class="inner">
+      <ul class="icons">
+        <li><a href="https://github.com/aggelen" class="icon brands fa-github"><span class="label">Github</span></a></li>
+        <li><a href="mailto:aykut.gelen@erzincan.edu.tr" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>Erzincan Binali Yıldırım Üniversitesi</li>
+        <li>Elektrik-Elektronik Mühendisliği Bölümü</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
